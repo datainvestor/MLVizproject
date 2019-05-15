@@ -9,7 +9,7 @@ from sklearn.cross_validation import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 import pandas as pd
 
-df=pd.read_csv("iris.csv")
+df=pd.read_csv("Iris.csv")
 df=df.drop(['Id'], axis=1)
 X = np.array(df.ix[:, 0:4])
 y = np.array(df['Species']) 
