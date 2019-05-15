@@ -9,6 +9,7 @@ from sklearn.cross_validation import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 import pandas as pd
 
+
 df=pd.read_csv("Iris.csv")
 df=df.drop(['Id'], axis=1)
 X = np.array(df.ix[:, 0:4])
@@ -18,6 +19,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random
 
 
 app = dash.Dash(__name__)
+server = app.server
 
 app.layout = html.Div([
     html.H1(children='ML Visualization App'),
